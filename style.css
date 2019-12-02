@@ -1,21 +1,37 @@
 .fake-box {
     position: relative;
+    margin-left: 1.5em;
+    padding: 1em;
+    height: 15em;
+    width: 20em;
 }
 
 .fake-box:before, .fake-box:after {
+    border: thin solid magenta;
+    content:"";
+    display: block;
     position: absolute;
-    
+    height: 15em;
+    width: 20em;
 }
 
 .fake-box:after {
-    left: 20px;
-    top: 20px;
+    position: relative;
+    top: -9em;
+    right: -1em;
+    bottom: -1em;
+    left: -1em;
 }
 
 .info-box {
     display: inline-block;
     max-width: 30%;
     margin: 0.5em;
+    padding: 0.5em;
     border: thin solid black;
     box-shadow: 0.5em 0.5em 0.25em black;
+}
+
+article {
+    padding: 0.5em;
 }
