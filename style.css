@@ -4,9 +4,18 @@
 
 .fake-box:before, .fake-box:after {
     position: absolute;
+    
 }
 
 .fake-box:after {
     left: 20px;
     top: 20px;
+}
+
+.info-box {
+    display: inline-block;
+    max-width: 30%;
+    margin: 0.5em;
+    border: thin solid black;
+    box-shadow: 0.5em 0.5em 0.25em black;
 }
