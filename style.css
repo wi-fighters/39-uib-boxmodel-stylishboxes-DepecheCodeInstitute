@@ -1,5 +1,6 @@
 .fake-box {
     position: relative;
+    /* this allows this element to overlap with other elements (MDN, https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning) */
     margin-left: 1.5em;
     padding: 1em;
     height: 15em;
@@ -10,7 +11,12 @@
     border: thin solid magenta;
     content:"";
     display: block;
+    /* default in-line for ::before and ::after pseudoclasses */
     position: absolute;
+     /* this moves this element to its own layer, separate from the positioning of other elements (MDN, ibid) */
+     /* "If the position property is absolute, the containing block is formed by the edge of the padding box of the nearest ancestor element that has a position value other than static (fixed, absolute, relative, or sticky)", i.e. the .fake-box class above! (MDN, https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block) */
+    content: "";
+    /* content property needed for ::before and ::after pseudoclass */
     height: 15em;
     width: 20em;
 }
@@ -27,9 +33,8 @@
     display: inline-block;
     max-width: 30%;
     margin: 0.5em;
-    padding: 0.5em;
-    border: thin solid black;
-    box-shadow: 0.5em 0.5em 0.25em black;
+    border: thin solid mediumslateblue;
+    box-shadow: 0.5em 0.5em 0.25em mediumspringgreen;
 }
 
 article {
